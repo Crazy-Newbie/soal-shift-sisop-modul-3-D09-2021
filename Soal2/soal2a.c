@@ -3,6 +3,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#include <pthread.h>
 
 int mat1[10][10];
 int mat2[10][10];
@@ -15,7 +16,7 @@ void *num_mat1(void *arg){
    int i,j;
    for(i=0; i<row1; i++){
       for(j=0; j<col1; j++){
-         scanf("%d", &mat1[i][j])
+         scanf("%d", &mat1[i][j]);
       }
    }
 }
@@ -45,9 +46,9 @@ void *calculate(void *arg){
 //Print Hasil
 void *print_result(void *arg){
    int i,j;
-   for(i=0; i<ro21; i++){
+   for(i=0; i<row1; i++){
       for(j=0; j<col2; j++){
-         printf("[%d]\t", &mat3[i][j]);
+         printf("[%d]\t", mat3[i][j]);
       }
    }
 }
