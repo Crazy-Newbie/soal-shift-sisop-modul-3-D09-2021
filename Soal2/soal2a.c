@@ -24,7 +24,7 @@ void *num_mat1(void *arg){
 //Matriks 3 x 6
 void *num_mat2(void *arg){
    int i,j;
-   for(i=0; i<row1; i++){
+   for(i=0; i<row2; i++){
       for(j=0; j<col2; j++){
          scanf("%d", &mat2[i][j]);
       }
