@@ -49,7 +49,7 @@ void *print_result(void *arg){
    for(i=0; i<row1; i++){
       for(j=0; j<col2; j++){
          printf("[%d] ", mat3[i][j]);
-         if(j==col-1){
+         if(j==col2-1){
             printf("\n");
          }
       }
