@@ -58,16 +58,16 @@ void *print_result(void *arg){
 
 int main(){
 
-   pthread_create(&tid[0],NULL,num_mat1,NULL);
-   pthread_create(&tid[1],NULL,num_mat2,NULL);
+   pthread_create(&(tid[0]),NULL,num_mat1,NULL);
+   pthread_create(&(tid[1]),NULL,num_mat2,NULL);
 
    pthread_join(tid[0],NULL);
    pthread_join(tid[1],NULL);
    
-   pthread_create(&tid[2],NULL,calculate,NULL);
+   pthread_create(&(tid[2]),NULL,calculate,NULL);
    pthread_join(tid[2],NULL);
 
-   pthread_create(&tid[3],NULL,print_result,NULL);
+   pthread_create(&(tid[3]),NULL,print_result,NULL);
    pthread_join(tid[3],NULL);
    
 
