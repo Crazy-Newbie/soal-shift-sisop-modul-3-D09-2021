@@ -58,11 +58,6 @@ void *print_result(void *arg){
 
 int main(){
 
-   key_t key = 1234;
-   int shmid = shmget(key, sizeof(int[10][10]), IPC_CREAT | 0666);
-   value shmat(shmid,0,0);
-
-
    pthread_create(&(tid[0]),NULL,num_mat1,NULL);
    pthread_join(tid[0],NULL);
 
